@@ -33,8 +33,8 @@ config :tailwind,
   default: [
     args: ~w(
       --config=tailwind.config.js
-      --input=css/app.css
-      --output=../priv/static/assets/app.css
+      --input=css/style.css
+      --output=../priv/static/assets/style.css
     ),
     cd: Path.expand("../assets", __DIR__)
   ]
