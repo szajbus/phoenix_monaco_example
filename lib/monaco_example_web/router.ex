@@ -17,7 +17,7 @@ defmodule MonacoExampleWeb.Router do
   scope "/", MonacoExampleWeb do
     pipe_through :browser
 
-    live "/", CodeEditorLive
+    live("/", CodeEditorLive, container: {:main, class: "flex-auto relative"})
   end
 
   # Other scopes may use custom stacks.
