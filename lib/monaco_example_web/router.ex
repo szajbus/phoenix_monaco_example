@@ -17,7 +17,7 @@ defmodule MonacoExampleWeb.Router do
   scope "/", MonacoExampleWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    live "/", CodeEditorLive
   end
 
   # Other scopes may use custom stacks.
