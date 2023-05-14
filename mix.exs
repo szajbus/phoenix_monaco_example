@@ -68,11 +68,13 @@ defmodule MonacoExample.MixProject do
       ],
       "assets.build": [
         "tailwind default",
-        "esbuild default"
+        "esbuild default",
+        "esbuild monaco_editor"
       ],
       "assets.deploy": [
         "tailwind default --minify",
         "esbuild default --minify",
+        "esbuild monaco_editor --minify",
         "phx.digest"
       ]
     ]

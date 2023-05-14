@@ -32,6 +32,19 @@ config :esbuild,
       ),
     cd: Path.expand("../assets", __DIR__),
     env: %{"NODE_PATH" => Path.expand("../deps", __DIR__)}
+  ],
+  monaco_editor: [
+    args: ~w(
+        node_modules/monaco-editor/esm/vs/editor/editor.worker.js
+        node_modules/monaco-editor/esm/vs/language/css/css.worker.js
+        node_modules/monaco-editor/esm/vs/language/html/html.worker.js
+        node_modules/monaco-editor/esm/vs/language/json/json.worker.js
+        node_modules/monaco-editor/esm/vs/language/typescript/ts.worker.js
+        --bundle
+        --target=es2017
+        --outdir=../priv/static/assets/monaco-editor
+      ),
+    cd: Path.expand("../assets", __DIR__)
   ]
 
 # Configure tailwind (the version is required)
